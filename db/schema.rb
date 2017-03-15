@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170315015629) do
+ActiveRecord::Schema.define(version: 20170315022711) do
+
+  create_table "accounts", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "owner_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["owner_id"], name: "index_accounts_on_owner_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -29,6 +37,19 @@ ActiveRecord::Schema.define(version: 20170315015629) do
     t.string   "unconfirmed_email"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.integer  "account_id"
+    t.string   "name"
+    t.string   "nickname"
+    t.string   "locations"
+    t.text     "bio"
+    t.string   "twitter"
+    t.string   "github"
+    t.string   "timezone"
+    t.integer  "end_time"
+    t.integer  "start_time"
+    t.string   "work_days"
+    t.string   "slack"
+    t.index ["account_id"], name: "index_users_on_account_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
