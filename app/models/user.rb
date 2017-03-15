@@ -6,4 +6,7 @@ class User < ApplicationRecord
          :confirmable
 
   belongs_to :account
+
+  validates :email, presence: true
+  validates :name, presence: true
 end
