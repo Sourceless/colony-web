@@ -11,6 +11,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'react-rails'
 gem 'devise'
+gem 'devise_invitable'
 
 group :development, :test do
   gem 'pry'
