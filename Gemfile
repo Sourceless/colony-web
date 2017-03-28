@@ -12,6 +12,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'react-rails'
 gem 'devise'
 gem 'devise_invitable'
+gem 'bootstrap'
+gem 'js-routes'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.3.3'
+end
 
 group :development, :test do
   gem 'pry'

@@ -16,4 +16,8 @@
 //= require react
 //= require react_ujs
 //= require components
+//= require jquery
+//= require tether
+//= require bootstrap
+//= require js-routes
 //= require_tree .
