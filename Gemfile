@@ -20,21 +20,18 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
 
-group :development, :test do
-  gem 'pry'
-  gem 'pry-byebug'
-  gem 'pry-stack_explorer'
-end
+# Dev and test
+gem 'pry'
+gem 'pry-byebug'
+gem 'pry-stack_explorer'
 
-group :development do
-  gem 'sqlite3'
-  gem 'web-console', '>= 3.3.0'
-  gem 'listen', '~> 3.0.5'
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'capistrano',         require: false
-  gem 'capistrano-rvm',     require: false
-  gem 'capistrano-rails',   require: false
-  gem 'capistrano-bundler', require: false
-  gem 'capistrano3-puma',   require: false
-end
+# Dev
+gem 'web-console', '>= 3.3.0'
+gem 'listen', '~> 3.0.5'
+gem 'spring'
+gem 'spring-watcher-listen', '~> 2.0.0'
+gem 'capistrano',         require: false
+gem 'capistrano-rvm',     require: false
+gem 'capistrano-rails',   require: false
+gem 'capistrano-bundler', require: false
+gem 'capistrano3-puma',   require: false
