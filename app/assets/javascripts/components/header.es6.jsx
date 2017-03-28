@@ -6,9 +6,6 @@ class Header extends React.Component {
         <div className="collapse navbar-collapse" id="navBarNavDropdown">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <a className="nav-link" href={Routes.product_path()}>Product</a>
-            </li>
-            <li className="nav-item">
               <a className="nav-link" href={Routes.pricing_path()}>Pricing</a>
             </li>
           </ul>
