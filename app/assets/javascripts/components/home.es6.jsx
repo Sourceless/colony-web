@@ -1,7 +1,7 @@
 class Home extends React.Component {
   render () {
     return (
-      <Layout>
+      <div className="home">
         <div className="jumbotron bg-inverse text-white text-center">
           <h1 className="display-3">Remote Team Hub</h1>
           <p className="lead">
@@ -75,7 +75,7 @@ class Home extends React.Component {
           <div className="col">
           </div>
         </div>
-      </Layout>
+      </div>
     );
   }
 }

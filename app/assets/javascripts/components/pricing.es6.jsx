@@ -1,7 +1,7 @@
 class Pricing extends React.Component {
   render () {
     return (
-      <Layout>
+      <div>
         <div className="row">
           <div className="col text-center my-5">
             <h1 className="display-4">Plans for any budget</h1>
@@ -25,7 +25,7 @@ class Pricing extends React.Component {
                 </ul>
               </div>
               <div className="card-block text-center">
-                <a className="btn btn-primary" href="#">Start Now</a>
+                <a className="btn btn-primary" href={Routes.new_account_path()}>Start Now</a>
               </div>
             </div>
           </div>
@@ -70,7 +70,7 @@ class Pricing extends React.Component {
             </div>
           </div>
         </div>
-      </Layout>
+      </div>
     );
   }
 }
