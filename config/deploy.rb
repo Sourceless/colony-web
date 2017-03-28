@@ -1,6 +1,8 @@
+server 'clny.io', port: 22, roles: [:web, :app, :db], primary: true
+
 set :application, "colony"
 set :repo_url, "git@github.com:Sourceless/colony-web.git"
-set :user,            'deploy' # TODO: change this!!
+set :user,            'ubuntu' # TODO: change this!!
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
