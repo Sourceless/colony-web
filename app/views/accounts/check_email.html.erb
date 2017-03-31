@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col">
+  </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-block">
+        <h2 class="card-title">Start a Colony</h2>
+        <hr />
+        <% if @new_invite %>
+          <p class>Invite sent! Check your inbox. <a href="<%= invite_account_path(@account.uuid) %>">Trouble? Resend invite.</a></p>
+        <% else %>
+          <p class>Invite re-sent. Please check your spam folder if you continue to have issues.</p>
+          <a href="<%= invite_account_path(@account.uuid) %>">Send again.</a>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+  </div>
+</div>

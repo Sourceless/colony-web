@@ -9,5 +9,4 @@ class User < ApplicationRecord
   belongs_to :team
 
   validates :email, presence: true
-  validates :name, presence: true
 end

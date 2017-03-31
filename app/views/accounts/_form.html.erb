@@ -1,17 +1,26 @@
-<%= form_for(account) do |f| %>
-  <% if account.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(account.errors.count, "error") %> prohibited this account from being saved:</h2>
+<div class="card-block">
+  <h2 class="card-title">Start a Colony</h2>
+  <hr />
+  <p class="text-muted">Name your colony. It can be your company's name, or whatever else you want it to be.</p>
+  <%= form_for(account) do |f| %>
+    <% if account.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(account.errors.count, "error") %> prohibited this account from being saved:</h2>
 
-      <ul>
-      <% account.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% account.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.text_field :name, class: "form-control text-center mx-auto", placeholder: "Organisation name", style: "width:20rem;" %>
+    </div>
+
+    <div class="actions text-center">
+      <%= f.submit "Next", class: "btn btn-primary" %>
     </div>
   <% end %>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

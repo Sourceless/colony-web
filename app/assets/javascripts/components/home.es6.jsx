@@ -7,7 +7,7 @@ class Home extends React.Component {
           <p className="lead">
             Work together effectively, even when you're far apart.
           </p>
-          <a className="btn btn-primary btn-lg" href={Routes.pricing_path()}>Get Started</a>
+          <a className="btn btn-primary btn-lg" href={Routes.new_account_path()}>Get Started</a>
         </div>
 
         <div className="row">

@@ -14,6 +14,7 @@ gem 'devise_invitable'
 gem 'bootstrap'
 gem 'js-routes'
 gem 'mysql2'
+gem 'gravatar_image_tag'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'

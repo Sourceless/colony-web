@@ -1,0 +1,12 @@
+<div class="col">
+  <div class="row">
+    <h1><%= @team.name.titleize %> Team</h1>
+  </div>
+<% @team.users.each do |u| %>
+  <div class="row">
+    <%= u.name %>
+    <%= gravatar_image_tag(u.email) %>
+    <%= user_path(u.email) %>
+  </div>
+<% end %>
+</div>

@@ -1,0 +1,28 @@
+<div class="card-block">
+  <h2 class="card-title">Start a Colony</h2>
+  <hr />
+  <p class="text-muted text-center">Almost ready - enter your email and we'll send you an invite.</p>
+  <%= form_for(user, url: invite_account_path(account.uuid)) do |f| %>
+    <% if user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(user.errors.count, "error") %> prohibited this account from being saved:</h2>
+
+        <ul>
+        <% user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.text_field :email, class: "form-control text-center mx-auto", placeholder: "you@yourcompany.com", style: "width:20rem;" %>
+    </div>
+
+    <%= f.hidden_field :account, value: account.id %>
+
+    <div class="actions text-center">
+      <%= f.submit "Next", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
